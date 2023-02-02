@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>수정</title>
+</head>
+<body>
+<!-- 헤더 위치 -->
+<div th:include="~{/comm/header.html}"></div>
+
+
+<main>
+  <form name="frm_study_mod" th:action="@{/study/modify_exe}" method="post">
+    <div>KeyID :  <input type="text" name="key_id" th:value="${vo_study.getKey_id()}" readonly></div><br>
+    <div>StudyDay : <input type="text" name="study_day" th:value="${vo_study.getStudy_day()}"></div><br>
+    <div>Cotents : <input type="text" name="contents" th:value="${vo_study.getContents()}" size="70"></div></p>
+
+    <input type="submit" value="수정하기">
+  </form>
+
+</main>
+
+<!-- 푸터 위치 -->
+<div th:include="~{/comm/footer.html}"></div>
+</body>
+</html>
